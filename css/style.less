@@ -1,0 +1,60 @@
+@import 'bootstrap.min.css';
+
+html{height:100%;min-height:100%;}
+
+body {
+  background:transparent url('../img/debut_dark.png') 0 0 repeat;
+  height:100%;
+  min-height:100%;
+  font-family:Arial, Helvetica, sans-serif;
+  padding:0;
+  overflow-x: hidden;
+}
+
+a { 
+  outline:none;
+}
+
+a:link, a:visited {
+  color: #33B3CC;
+  text-decoration: none;
+}
+
+a:hover, a:active {
+  color: #2B8B9E;
+  transition: 500ms;
+  text-shadow: 0 0 1px rgba(0,0,0, 0.3);
+}
+
+#wrapper {
+  width:690px;
+  margin:0 auto;
+  position:relative;
+  padding-bottom: 40px;
+}
+
+@import "sidebar.less";
+@import "content.less";
+@import "socialfeed.less";
+@import "responsive.less";
+
+/* LOADING
+---------------------------------------------------*/
+
+.loading {
+  // background: rgba(0,0,0, 0.7);
+  border-radius: 5px;
+  padding: 20px;
+
+  position: absolute;
+  z-index: 999;
+  width: 200px;
+  left: 50%;
+  top: 50%;
+  margin-left: -120px;
+  margin-top: -50px;
+  text-align: center;
+
+  display: none;
+  font-size: 30px;
+}

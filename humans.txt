@@ -1,0 +1,17 @@
+/* the humans responsible & colophon */
+/* humanstxt.org */
+
+
+/* TEAM */
+  Mikael Brevik
+  Site: http://mikaelb.net
+  Twitter: @mikaelbrevik
+  Location: Trondheim, Norway
+
+/* THANKS */
+  Names (& URL):
+
+/* SITE */
+  Standards: HTML5, CSS3
+  Components: Modernizr, jQuery
+  Software: Sublime Text 2

@@ -1,0 +1,17 @@
+<div class="socialfeed-item socialfeed-github socialfeed-github-push">
+  <i class="socialfeed-icon icon-github"></i>
+  <header>
+    <h2>
+      <a href="{{userURL actor}}">{{actor.login}}</a> pushed to <a href="{{repoURL repo}}">{{repo.name}}</a>
+    </h2>
+    <time datetime="{{created_at}}">{{moment created_at}}</time>
+  </header>
+  <ul class="socialfeed-commit-list">
+    {{#each payload.commits}}
+    <li>
+      <a href="{{repoURL ../repo}}/commit/{{sha}}">{{shaShort sha}}</a>
+      <span>{{message}}</span>
+    </li>
+    {{/each}}
+  </ul>
+</div>
