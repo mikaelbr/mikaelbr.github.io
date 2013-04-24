@@ -179,15 +179,17 @@ header.personalia-header h2 {
 .content a:focus {
   outline: none;
 }
-/* Social Feed
----------------------------------------------------*/
-.socialfeed-container {
-  width: 100%;
+.content-container {
   position: relative;
   border: 1px solid #ddd;
   min-height: 277px;
   background: rgba(255, 255, 255, 0.5);
 }
+.about .content-container {
+  padding: 10px;
+}
+/* Social Feed
+---------------------------------------------------*/
 .socialfeed-container .socialfeed-icon {
   position: absolute;
   font-size: 40px;

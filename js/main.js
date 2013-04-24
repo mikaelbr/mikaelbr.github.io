@@ -28,15 +28,18 @@ require([
     'modules/Twitter',
     'modules/Disqus',
     'modules/Github',
-    'modules/Delicious'
+    'modules/Delicious',
+    'page'
   ], 
-  function ($, Handlebars, moment, SocialFeed, Twitter, Disqus, Github, Delicious) {
+  function ($, Handlebars, moment, SocialFeed, Twitter, Disqus, Github, Delicious, page) {
 
   Handlebars.registerHelper('moment', function(date) {
     return moment(date).fromNow();
   });
 
-  $('.content-hidden').removeClass('content-hidden');
+  $('.content-hidden').addClass('content-loading').removeClass('content-hidden');
+
+  page.init();
 
   var sfeed = new SocialFeed({
       el: $('#socialfeed')
