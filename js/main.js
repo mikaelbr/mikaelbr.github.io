@@ -36,7 +36,7 @@ require([
     return moment(date).fromNow();
   });
 
-  $('.content-hidden').addClass('content-loading').removeClass('content-hidden');
+  $('.content-hidden').removeClass('content-hidden');
 
   var sfeed = new SocialFeed({
       el: $('#socialfeed')
