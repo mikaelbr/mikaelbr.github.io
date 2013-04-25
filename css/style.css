@@ -188,6 +188,12 @@ header.personalia-header h2 {
 .about .content-container {
   padding: 10px;
 }
+.socialfeed-notice {
+  font-size: 0.7em;
+  text-align: right;
+  font-style: italic;
+  margin-bottom: 0;
+}
 .content.about .content-container {
   padding-top: 70px;
 }
