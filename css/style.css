@@ -291,6 +291,9 @@ header.personalia-header h2 {
 .socialfeed-container .socialfeed-github:not(.socialfeed-github-push) h2 {
   margin: 0;
 }
+.socialfeed-container .socialfeed-body {
+  margin: 0 20px 0;
+}
 .socialfeed-container .socialfeed-commit-list {
   margin: 0 20px 0;
   padding: 0;
