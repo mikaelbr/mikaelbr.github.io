@@ -2,7 +2,7 @@ require.config({
   paths: {
     'jquery': 'vendor/jquery/jquery',
     'modernizr': 'vendor/modernizr/modernizr',
-    'socialfeed': 'vendor/socialfeed/build/socialfeed',
+    'socialfeed': 'vendor/socialfeed/socialfeed',
     'moment': 'vendor/moment/moment',
     'handlebars': 'vendor/handlebars/handlebars',
     'text': 'vendor/text/text',
