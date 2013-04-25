@@ -7,11 +7,11 @@
     <time datetime="{{created_at}}">{{moment created_at}}</time>
   </header>
   <ul class="socialfeed-commit-list">
-    {{#each payload.commits}}
+    {{#reverseEach payload.commits}}
     <li>
       <a href="{{repoURL ../repo}}/commit/{{sha}}">{{shaShort sha}}</a>
       <span>{{message}}</span>
     </li>
-    {{/each}}
+    {{/reverseEach}}
   </ul>
 </div>

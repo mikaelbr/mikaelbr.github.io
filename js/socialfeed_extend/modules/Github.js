@@ -43,6 +43,17 @@ define([
         return sha.substr(0, 7);
       });
 
+      Handlebars.registerHelper('reverseEach', function(context, options) {
+        var ret = "";
+
+        for(var i = context.length - 1, j=0; i >= j; i--) {
+          console.log(i, context[i])
+          ret = ret + options.fn(context[i]);
+        }
+
+        return ret;
+      });
+
       return SocialFeed.Modules.Github.extend({
         renderMethods: {
           'CreateEvent': function (item) {
