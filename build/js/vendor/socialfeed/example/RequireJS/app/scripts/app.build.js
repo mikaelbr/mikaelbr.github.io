@@ -1,0 +1,1 @@
+({appDir:"../",baseUrl:"scripts/",dir:"../../dist",paths:{jquery:"empty:",socialfeed:"../../../../socialfeed"},modules:[{name:"main"}]});

@@ -1,0 +1,1 @@
+requirejs.config({paths:{socialfeed:"../../../../socialfeed"}}),require(["jquery","socialfeed"],function(e,t){(new t(e("#socialfeed"))).addModule(new t.Modules.Github("mikaelbr")).start()});

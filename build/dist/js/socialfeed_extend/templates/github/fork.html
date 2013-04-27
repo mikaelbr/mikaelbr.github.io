@@ -1,0 +1,11 @@
+<div class="socialfeed-item socialfeed-github socialfeed-github-fork">
+  <i class="socialfeed-icon icon-github"></i>
+  <header>
+    <h2>
+      <a href="{{userURL actor}}">{{actor.login}}</a>
+      forked repository <a href="{{repoURL repo}}">{{repo.name}}</a>
+      to <a href="{{payload.forkee.html_url}}">{{payload.forkee.full_name}}</a>
+    </h2>
+    <time datetime="{{created_at}}">{{moment created_at}}</time>
+  </header>
+</div>

@@ -1,7 +1,7 @@
 ({
     appDir: "./",
     baseUrl: "js/",
-    dir: "./dist",
+    dir: "./build",
     //Comment out the optimize line if you want
     //the code minified by UglifyJS
     // optimize: "none",
