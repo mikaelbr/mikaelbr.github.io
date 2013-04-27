@@ -1,1 +1,0 @@
-define(["jquery"],function(e){return{showPage:function(t){var n=e(t);n.show().siblings(".content").hide()},bind:function(){var t=this;e("nav").on("click","li a",function(){t.showPage(e(this).attr("href"))})},setStartPage:function(){if(window.location.hash==="#about")return this.showPage("#about");this.showPage("#home")},init:function(){this.bind(),this.setStartPage()}}});

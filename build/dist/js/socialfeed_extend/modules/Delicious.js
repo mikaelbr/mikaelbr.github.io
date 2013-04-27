@@ -1,1 +1,0 @@
-define(["socialfeed","handlebars","text!tmpl/Delicious.html"],function(e,t,n){var r=t.compile(n);return e.Modules.Delicious.extend({render:function(e){return r(e)}})});
