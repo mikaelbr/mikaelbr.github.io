@@ -9,6 +9,9 @@ style:
 
 bundle: style
 	r.js -o app.build.js
+	rm -rf dist/.git
+	rm dist/.gitignore dist/.bowerrc dist/.gitattributes  dist/*.html dist/*.js dist/CNAME dist/Makefile
+	rm dist/*.md dist/*.txt dist/*.xml dist/*.json
 
 deploy:
 	git push origin master
