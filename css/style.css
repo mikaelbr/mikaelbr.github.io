@@ -194,6 +194,10 @@ header.personalia-header h2 {
   font-style: italic;
   margin-bottom: 0;
 }
+.details-link {
+  font-size: 0.8em;
+  text-align: right;
+}
 .content.about .content-container {
   padding-top: 70px;
 }
