@@ -1,8 +1,8 @@
 // Twitter module
-define(['socialfeed', 'handlebars', 'text!tmpl/Twitter.html'], function (SocialFeed, Handlebars, TwitterTemplate) {
+define(['socialfeed', 'handlebars', 'text!tmpl/Twitter.html', 'text!tmpl/TwitterRetweet.html'], function (SocialFeed, Handlebars, TwitterTemplate, RetweetTemplate) {
 
-  var template = Handlebars.compile(TwitterTemplate);
-
+  var template = Handlebars.compile(TwitterTemplate)
+    , retweetTemplate = Handlebars.compile(RetweetTemplate);
 
   // From https://gist.github.com/wadey/442463
   function escapeHTML(text) {
@@ -73,7 +73,10 @@ define(['socialfeed', 'handlebars', 'text!tmpl/Twitter.html'], function (SocialF
     }
 
     , render: function (item) {
-       return template(item);
+      if (item.retweeted_status) {
+        return retweetTemplate(item);
+      }
+      return template(item);
     }
   });
 });

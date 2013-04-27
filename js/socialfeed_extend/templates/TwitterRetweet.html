@@ -1,0 +1,11 @@
+<div class="socialfeed-item socialfeed-twitter">
+  <i class="socialfeed-icon icon-twitter-sign"></i>
+  <header>
+    <h2><a href="http://twitter.com/{{user.screen_name}}">@{{user.screen_name}}</a> 
+      retweeted <a href="http://twitter.com/{{retweeted_status.user.screen_name}}">@{{retweeted_status.user.screen_name}}</a>:</h2>
+    <time datetime="{{created_at}}">{{moment created_at}}</time>
+  </header>
+  <div class="socialfeed-body">
+    {{twitParse retweeted_status}}
+  </div>
+</div>
