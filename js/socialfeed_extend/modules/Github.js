@@ -53,7 +53,7 @@ define([
         return ret;
       });
 
-      return SocialFeed.Modules.Github.extend({
+      var Module = SocialFeed.Modules.Github.extend({
         renderMethods: {
           'CreateEvent': function (item) {
             if (item.payload.ref === null) {
@@ -84,4 +84,5 @@ define([
           }
         }
       });
+      return Module;
 });

@@ -29,9 +29,10 @@ require([
     'modules/Disqus',
     'modules/Github',
     'modules/Delicious',
+    'modules/GithubReceived',
     'page'
   ], 
-  function ($, Handlebars, moment, SocialFeed, Twitter, Disqus, Github, Delicious, page) {
+  function ($, Handlebars, moment, SocialFeed, Twitter, Disqus, Github, Delicious, GithubReceived, page) {
 
   Handlebars.registerHelper('moment', function(date) {
     return moment(date).fromNow();
@@ -49,14 +50,27 @@ require([
   .addModule(new Delicious('mikaelbr'))
   .addModule(new Twitter())
   .on('preFetch', function (htmlList, modules) {
-    $('.loading').show();
+    $('#home .loading').show();
   })
   .on('postFetch', function (htmlList, modules) {
-    $('.loading').hide();
+    $('#home .loading').hide();
   })
   .start();
 
   sfeed.on('error', function () {
-    console.log('Error');
+    console && console.error & console.error('Error');
   });
+
+  var codeFeed = new SocialFeed({
+      el: $('#socialfeed-code')
+  })
+  .addModule(new GithubReceived('mikaelbr'))
+  .on('preFetch', function (htmlList, modules) {
+    $('#code .loading').show();
+  })
+  .on('postFetch', function (htmlList, modules) {
+    $('#code .loading').hide();
+  })
+  .start();
+
 });

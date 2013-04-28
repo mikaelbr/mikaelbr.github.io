@@ -13,8 +13,13 @@ define(['jquery'], function ($) {
     }
 
     , setStartPage: function () {
-      if (window.location.hash === "#about") {
+      var loc = window.location.hash;
+      if (loc === "#about") {
         return this.showPage("#about");
+      }
+
+      if (loc === "#code") {
+        return this.showPage("#code");
       }
     
       this.showPage('#home');
