@@ -1,0 +1,1 @@
+define(["socialfeed","modules/Github"],function(e,t){return t.extend({url:function(){return"https://api.github.com/users/"+this.ident+"/received_events"},parse:function(e){return e.meta&&e.meta.status!==200?[]:e.data?e.data:[]}})});
