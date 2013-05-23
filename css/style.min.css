@@ -13,7 +13,7 @@ header.personalia-header h1 .separator{color:#d4d4d4;margin:0 11px;}
 header.personalia-header h2{font-size:14px;position:relative;top:-2px;letter-spacing:-0.15px;}
 .main-nav{transition:top 500ms,-webkit-transform 500ms;position:absolute;left:-150px;top:120px;padding:0;margin:0;text-align:left;}.main-nav ul{margin:0;padding:0;list-style-type:none;}
 .main-nav li{display:block;}
-.main-nav li a{background:#F5F5F5;display:block;padding:9px 35px 9px 5px;margin-left:111.6px;transition:margin 500ms;font-size:16px;vertical-align:middle;border-top:1px solid #fff;border-bottom:1px solid #E8E8E8;}.main-nav li a i{font-size:24px;}
+.main-nav li a{background:#F5F5F5;display:block;padding:9px 35px 9px 5px;margin-left:111.6px;transition:margin 500ms;font-size:16px;vertical-align:middle;border-top:1px solid #fff;border-bottom:1px solid #E8E8E8;}.main-nav li a i{font-size:24px;margin:0 5px;}
 .main-nav li a:hover{margin-left:0;background:#F0F0F0;}
 .main-nav li a :first{border-top:0;}
 .content-wrapper{position:relative;}

@@ -986,6 +986,7 @@ header.personalia-header h2 {
 }
 .main-nav li a i {
   font-size: 24px;
+  margin: 0 5px;
 }
 .main-nav li a:hover {
   margin-left: 0;
