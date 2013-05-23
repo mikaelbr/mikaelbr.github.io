@@ -9,6 +9,7 @@ SocialFeed.js was inspired by the compiled feed on http://gnab.org/, and was des
 At this moment the following features are implemented:
 
 * Github
+* Vimeo
 * Youtube Video Uploads
 * Disqus
 * RSS Feeds
@@ -16,7 +17,9 @@ At this moment the following features are implemented:
 
 However, expading SocialFeed.js is a simple task. See [Expading SocialFeed.js](#expanding-socialfeedjs) for more information.
 
-See SocialFeed.js in use at my [personal site](http://mikaelb.net/).
+See SocialFeed.js in use at my [personal site](http://mikaelb.net/). For a complete example two SocialFeeds, 
+Require.JS, extending modules, using with Handlebar, etc see the source code for http://mikaelb.net/ at 
+https://github.com/mikaelbr/mikaelbr.github.io.
 
 ## Installation & Usage
 
@@ -64,7 +67,7 @@ passing the ```count```-option. Even if ```count``` is 5, all module items are f
 Constructor:
 ```javascript
 new SocialFeed({
-    el: $('#foo')
+    el: '#foo' // selector or jQuery object for wrapper element.
   , count: 10 // defaults to 1000
   , offset: 10 // defaults to 0. Start rendering from offset.
 });
@@ -74,7 +77,7 @@ If you set offset to ```N```, the first ```N``` items won't show.
 
 Shortcut:
 ```javascript
-new SocialFeed($('#foo'));
+new SocialFeed('#foo');
 ```
 
 Let's see how we can add Github and Delicious as a part of the feed (using the template as defined above.):
@@ -107,16 +110,16 @@ Every built in module is under the namespace ```SocialFeed.Modules```.
 | Module        | Description           |
 | ------------- | ----------------------|
 | ```Github(username[, hideEvents = None])``` | Shows all your events on github, including create repositories, starring, forking, pull requesting, pushing. |
+| ```Vimeo(username[, hideEvents = None])``` | Shows your activity on Vimeo, including like, add comment and upload. |
 | ```YouTubeUploads(username[, count = 10])``` | Shows uploaded YouTube videos. Sorted by updated time, not published. |
 | ```Disqus(username, public_api_key)``` | Show your public comments made on Disqus. |
 | ```Delicious(username)``` | Shows your shared bookmarks. |
-| ```Delicious(rssUrl, count)``` | Fetches the ```count``` number of posts from your RSS feed at ```rssUrl``` |
+| ```RSS(rssUrl, count)``` | Fetches the ```count``` number of posts from your RSS feed at ```rssUrl``` |
 
 
 ## API
 
 ```SocialFeed``` exposes several functions and events. 
-
 
 ### Methods
 
@@ -124,6 +127,8 @@ Every built in module is under the namespace ```SocialFeed.Modules```.
 | ------------- | ----------------------|
 | ```.start()```      | Initiate SocialFeed.js. |
 | ```.reload()```     | Reload content. Fetch new data from social channels. |
+| ```.loadNumEntries(number)```     | Load the next ```number``` items, if more to load. |
+| ```.nextBulk()```     | Loads the next bulk of items. If constructor initiated with count 10, load next 10. |
 | ```.addModule(Module)``` | Add a new module to the feed. |
 | ```.on(eventType, callback)``` | Listen for an event on the feed. See [Events](#events)|
 
@@ -149,11 +154,14 @@ mod.on('eventName', function() { /* body */ });
 | ---------------- | ----------------------| ----------------------|
 | ```start```      | None | Triggered when ```.start()``` is called |
 | ```reload```     | None | Triggered when ```.reload()``` is called |
-| ```moduleAdded```| AddedModule | Triggered when module is added |
+| ```addModule```| Module | Triggered when module is added |
+| ```moduleAdded```| Module | Triggered when module is added and fetched |
 | ```preFetch```   | None | Triggered before fetching data from modules. |
 | ```postFetch```  | AllModules[] | Triggered when all modules are fetched |
 | ```dataReady```  | SortedHTMLList, AllModules[] | Triggered when all data is generated as HTML. |
 | ```rendered```   | SortedHTMLList{from _offset, to count} | Triggered when rendering new items. Passes the sorted HTML list with the rendered entities. |
+| ```nextBulk```   | None | Triggered when ```.nextBulk()``` is called. |
+| ```loadNumEntries```   | Number | Triggered when ```.loadNumEntries()``` is called. |
 | ```error```      | Module, jqXHR, AjaxOptions | Triggered when error fetching some module data. |
 
 

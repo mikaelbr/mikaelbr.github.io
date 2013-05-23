@@ -29,10 +29,11 @@ require([
     'modules/Disqus',
     'modules/Github',
     'modules/Delicious',
+    'modules/Vimeo',
     'modules/GithubReceived',
     'page'
   ], 
-  function ($, Handlebars, moment, SocialFeed, Twitter, Disqus, Github, Delicious, GithubReceived, page) {
+  function ($, Handlebars, moment, SocialFeed, Twitter, Disqus, Github, Delicious, Vimeo, GithubReceived, page) {
 
   Handlebars.registerHelper('moment', function(date) {
     return moment(date).fromNow();
@@ -47,6 +48,7 @@ require([
   })
   .addModule(new Disqus('mikaelbr', 'OEMdBc63xd0MZGKiVV5JgExTqdO7OSYkjgv613LJ8Py89y44pcoSKeBrelZjepVS'))
   .addModule(new Github('mikaelbr'))
+  .addModule(new Vimeo('mikaelbr'))
   .addModule(new Delicious('mikaelbr'))
   .addModule(new Twitter())
   .on('preFetch', function (htmlList, modules) {
