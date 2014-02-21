@@ -1,1 +1,0 @@
-define(["socialfeed","handlebars","text!tmpl/Disqus.html"],function(e,t,n){var r=t.compile(n,{noEscape:!0});return e.Modules.Disqus.extend({render:function(e){return r(e)}})});
