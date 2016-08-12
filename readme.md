@@ -1,5 +1,3 @@
-# Homepage @ http://mikaelbr.github.com
+# Homepage @ http://mib.im
 
-This site uses https://github.com/mikaelbr/SocialFeed.js.
-
-More information soon.
+Personal homepage

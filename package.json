@@ -1,31 +1,20 @@
 {
   "name": "mikaelbr.github.io",
-  "version": "0.0.0",
-  "description": "Homepage for git.mikaelb.net",
-  "main": "index.html",
+  "version": "1.0.0",
+  "description": "Personal homepage",
+  "main": "index.js",
   "scripts": {
-    "watch-css": "catw -c 'lessc --include-path=style -' 'style/style.less' -o build/bundle.css -v",
-    "watch-js": "watchify -t brfs browser/main.js -o build/bundle.js -dv",
-    "watch": "npm run watch-css & npm run watch-js",
-    "build-css": "catw -c 'lessc --include-path=style --clean-css -' 'style/style.less' > build/bundle.css",
-    "build-js": "browserify -t brfs browser/main.js > build/bundle.js",
-    "build": "npm run build-css && npm run build-js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mikaelbr/mikaelbr.github.io.git"
+    "url": "git+https://github.com/mikaelbr/mikaelbr.github.io.git"
   },
+  "keywords": [],
   "author": "Mikael Brevik <mikaelbre@gmail.com>",
-  "license": "MIT",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/mikaelbr/mikaelbr.github.io/issues"
   },
-  "homepage": "https://github.com/mikaelbr/mikaelbr.github.io",
-  "dependencies": {
-    "socialfeed": "~0.3.9",
-    "jquery": "~2.1.0",
-    "moment": "~2.5.1",
-    "handlebars": "~2.0.0-alpha.1",
-    "brfs": "~0.2.1"
-  }
+  "homepage": "https://github.com/mikaelbr/mikaelbr.github.io#readme"
 }
