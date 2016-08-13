@@ -54,7 +54,6 @@ body::after {
 .left,
 .right {
   flex: 1 0 50%;
-  width: 50;
   min-height: 100%;
 
   padding: 15rem 1.5rem 7rem;
@@ -81,7 +80,6 @@ body::after {
 
 .right {
   background: rgba(100,100,100, 0.05);
-  /*background: #2d2d2d;*/
 }
 .left > div {
   width: 100%;
@@ -146,4 +144,19 @@ body::after {
 .attribution a {
   color: #999;
   text-decoration: none;
+}
+
+@media (max-width: 620px) {
+  body {
+    flex-direction: column;
+  }
+
+  .left,
+  .right {
+    flex: 1 0 50%;
+    min-height: 100%;
+    padding: 2rem 1.5rem;
+    text-align: right;
+  }
+
 }
