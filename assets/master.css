@@ -37,7 +37,7 @@ body::before {
   right: 0;
   position: absolute;
   z-index: -1;
-  background: url('./pattern.jpg') top left repeat-x;
+  background: url('./pattern-min.jpg') top left repeat-x;
 }
 
 body::after {
