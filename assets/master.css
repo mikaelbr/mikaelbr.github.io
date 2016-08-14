@@ -1,5 +1,51 @@
+@font-face {
+	font-family: 'Computer Modern Serif';
+	src: url('./font/cmunrm.eot');
+	src: url('./font/cmunrm.eot?#iefix') format('embedded-opentype'),
+		 url('./font/cmunrm.woff') format('woff'),
+		 url('./font/cmunrm.ttf') format('truetype'),
+		 url('./font/cmunrm.svg#cmunrm') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Computer Modern Serif';
+	src: url('./font/cmunbx.eot');
+	src: url('./font/cmunbx.eot?#iefix') format('embedded-opentype'),
+		 url('./font/cmunbx.woff') format('woff'),
+		 url('./font/cmunbx.ttf') format('truetype'),
+		 url('./font/cmunbx.svg#cmunbx') format('svg');
+	font-weight: bold;
+	font-style: normal;
+}
+
+
+@font-face {
+	font-family: 'Computer Modern Serif';
+	src: url('./font/cmunti.eot');
+	src: url('./font/cmunti.eot?#iefix') format('embedded-opentype'),
+		 url('./font/cmunti.woff') format('woff'),
+		 url('./font/cmunti.ttf') format('truetype'),
+		 url('./font/cmunti.svg#cmunti') format('svg');
+	font-weight: normal;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Computer Modern Serif';
+	src: url('./font/cmunbi.eot');
+	src: url('./font/cmunbi.eot?#iefix') format('embedded-opentype'),
+		 url('./font/cmunbi.woff') format('woff'),
+		 url('./font/cmunbi.ttf') format('truetype'),
+		 url('./font/cmunbi.svg#cmunbi') format('svg');
+	font-weight: bold;
+	font-style: italic;
+}
+
 body {
-  color: #666;
+  color: #333;
+  font-family: "Computer Modern Serif", Serif;
 }
 body::before,
 body::after {
@@ -25,17 +71,16 @@ body::after {
 .right h1,
 .right h2 {
   font-style: italic;
-  font-weight: 600;
+  font-weight: bold;
 }
 .left h3 {
   font-style: italic;
-  font-weight: 600;
+  font-weight: bold;
 }
 .description {
   text-align: justify;
   font-size: 0.9rem;
   margin-top: 1rem;
-  color: #888;
 }
 
 .left {
@@ -44,7 +89,7 @@ body::after {
 
 .left a,
 .headerMetadata a {
-  color: #888;
+  color: #333;
   text-decoration: none;
 }
 .left li > a {
@@ -52,13 +97,12 @@ body::after {
   text-decoration: underline;
 }
 .left a:hover,
-.left li:hover > a,
 .headerMetadata a:hover {
-  color: #333;
+  color: #888;
 }
 
 .metadata {
-  color: #999;
+  color: #555;
 }
 .headerMetadata {
   font-style: italic;
@@ -66,17 +110,17 @@ body::after {
 
 .insetshadow,
 .insetshadow--small {
-  color: #666;
+  color: #333;
   letter-spacing: .1em;
 }
 
 .insetshadow {
-  text-shadow: 3px 3px 0px #d5d5d5,
-      6px 6px 0px rgba(0, 0, 0, 0.2);
-}
-.insetshadow--small {
   text-shadow: 2px 2px 0px #d5d5d5,
       4px 4px 0px rgba(0, 0, 0, 0.2);
+}
+.insetshadow--small {
+  text-shadow: 1px 1px 0px #d5d5d5,
+      2px 2px 0px rgba(0, 0, 0, 0.2);
 }
 
 .attribution {
