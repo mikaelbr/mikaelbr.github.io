@@ -16,6 +16,7 @@ body {
 }
 .left, .right {
   flex: 1 0 auto;
+  max-width: 50%;
   padding: 15rem 1.5rem 7rem;
 }
 .right h1, .right h2 {
@@ -24,6 +25,9 @@ body {
 .left h3 {
   font-size: 1.5rem;
   padding-top: 1.5rem;
+}
+.description {
+  max-width: 400px
 }
 .left {
   font-size: 1rem;
@@ -56,8 +60,15 @@ body {
   .left, .right {
     text-align: right;
     padding: 2rem 1.5rem;
+    max-width: 100%;
   }
   .headerMetadata {
     font-size: 1.1rem;
+  }
+  .right h1 {
+    font-size: 2.2rem;
+  }
+  .description {
+    display: none;
   }
 }
