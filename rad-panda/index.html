@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Rad Panda</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Nova+Mono" rel="stylesheet">
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    body,
+    html {
+      height: 100%;
+      width: 100%;
+    }
+
+    body {
+      display: flex;
+      font-family: 'Nova Mono', monospace;
+      font-size: 20px;
+      background: #94B4B1;
+    }
+
+    h1 {
+      margin: auto;
+      font-size: 3rem;
+      color: #3C2D46;
+    }
+
+    .e {
+      display: inline-block;
+      transform-origin: center;
+      vertical-align: sub;
+      transform: translateY(-10px);
+      transition: transform 200ms ease-in;
+    }
+
+    .e-m {
+      transform: translateY(0);
+    }
+
+    .e-a {
+      transition: transform 400ms ease-in;
+      transform: rotateZ(182deg);
+    }
+
+    .shake {
+      animation: shake 0.82s cubic-bezier(.36, .07, .19, .97) infinite alternate;
+      transform: translate3d(0, 0, 0);
+      backface-visibility: hidden;
+      perspective: 1000px;
+      animation-delay: 300ms;
+    }
+
+    @keyframes shake {
+      10%,
+      45% {
+        transform: translate3d(0, -1px, 0);
+      }
+
+      15%,
+      40% {
+        transform: translate3d(0, 1px, 0);
+      }
+
+      20%,
+      25%,
+      30% {
+        transform: translate3d(0, -2px, 0);
+      }
+
+      23%,
+      28% {
+        transform: translate3d(0, 2px, 0);
+      }
+
+      55%,
+      100% {
+        transform: translate3d(0, 0, 0);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <h1>R<span class="e">e</span>d Panda</h1>
+
+  <script>
+    (function () {
+      setTimeout(function () {
+        document.querySelector('.e').classList.add('e-m');
+      }, 0)
+      setTimeout(function () {
+        document.querySelector('.e').classList.add('e-a');
+      }, 300)
+      setTimeout(function () {
+        document.querySelector('h1').classList.add('shake');
+      }, 1200)
+    }());
+  </script>
+</body>
+
+</html>
